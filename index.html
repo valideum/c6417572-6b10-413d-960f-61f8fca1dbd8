@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>LumiVision | Architectural Precision via AI</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;700;800&amp;family=DM+Sans:wght@400;500&amp;family=Geist:wght@400;500&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-error": "#ffffff",
+                        "primary": "#5e5e5c",
+                        "on-tertiary-fixed-variant": "#653e00",
+                        "inverse-primary": "#c8c6c4",
+                        "on-background": "#171d1b",
+                        "surface-container-highest": "#dee4e0",
+                        "surface-variant": "#dee4e0",
+                        "secondary-fixed": "#dde4df",
+                        "on-tertiary-container": "#9d6711",
+                        "on-secondary-container": "#5d6460",
+                        "surface": "#f5fbf7",
+                        "tertiary-fixed": "#ffddb7",
+                        "on-secondary": "#ffffff",
+                        "on-tertiary": "#ffffff",
+                        "surface-container-lowest": "#ffffff",
+                        "secondary-container": "#dae1dc",
+                        "on-primary-container": "#737270",
+                        "surface-container-low": "#eff5f1",
+                        "outline": "#757873",
+                        "primary-fixed-dim": "#c8c6c4",
+                        "error-container": "#ffdad6",
+                        "primary-fixed": "#e4e2df",
+                        "surface-bright": "#f5fbf7",
+                        "on-secondary-fixed": "#161d1a",
+                        "secondary": "#59605c",
+                        "on-primary-fixed-variant": "#474745",
+                        "on-tertiary-fixed": "#2a1700",
+                        "surface-tint": "#5e5e5c",
+                        "surface-container-high": "#e4e9e6",
+                        "tertiary": "#855400",
+                        "secondary-fixed-dim": "#c1c8c3",
+                        "on-secondary-fixed-variant": "#414845",
+                        "on-error-container": "#93000a",
+                        "on-surface": "#171d1b",
+                        "inverse-on-surface": "#ecf2ee",
+                        "outline-variant": "#c5c7c1",
+                        "on-primary-fixed": "#1b1c1a",
+                        "on-primary": "#ffffff",
+                        "primary-container": "#fbf9f6",
+                        "background": "#f5fbf7",
+                        "tertiary-container": "#fff8f4",
+                        "surface-container": "#eaefeb",
+                        "on-surface-variant": "#454843",
+                        "error": "#ba1a1a",
+                        "inverse-surface": "#2c322f",
+                        "surface-dim": "#d6dbd8",
+                        "tertiary-fixed-dim": "#feb95f"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "margin-desktop": "64px",
+                        "stack-lg": "80px",
+                        "stack-md": "32px",
+                        "container-max": "1280px",
+                        "margin-mobile": "20px",
+                        "gutter": "24px",
+                        "base": "8px",
+                        "stack-sm": "16px"
+                    },
+                    "fontFamily": {
+                        "headline-lg": ["Hanken Grotesk"],
+                        "display-lg-mobile": ["Hanken Grotesk"],
+                        "label-sm": ["Geist"],
+                        "label-md": ["Geist"],
+                        "body-md": ["DM Sans"],
+                        "headline-md": ["Hanken Grotesk"],
+                        "display-lg": ["Hanken Grotesk"],
+                        "body-lg": ["DM Sans"]
+                    },
+                    "fontSize": {
+                        "headline-lg": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                        "display-lg-mobile": ["40px", {"lineHeight": "48px", "letterSpacing": "-0.02em", "fontWeight": "800"}],
+                        "label-sm": ["12px", {"lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "500"}],
+                        "label-md": ["14px", {"lineHeight": "20px", "letterSpacing": "0.05em", "fontWeight": "500"}],
+                        "body-md": ["16px", {"lineHeight": "28px", "fontWeight": "400"}],
+                        "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "700"}],
+                        "display-lg": ["64px", {"lineHeight": "72px", "letterSpacing": "-0.02em", "fontWeight": "800"}],
+                        "body-lg": ["18px", {"lineHeight": "32px", "fontWeight": "400"}]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        
+        .glow-amber:hover {
+            box-shadow: 0 4px 20px rgba(234, 168, 80, 0.4);
+        }
+
+        .sweep-container:hover .sweep-overlay {
+            width: 100%;
+        }
+
+        .sweep-overlay {
+            transition: width 1.5s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        input[type="range"]::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            appearance: none;
+            width: 24px;
+            height: 24px;
+            background: #2c322f;
+            border: 2px solid #ffddb7;
+            border-radius: 50%;
+            cursor: pointer;
+        }
+
+        .gallery-card {
+            box-shadow: 0 40px 80px -20px rgba(23, 29, 27, 0.04);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .gallery-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 40px 80px -10px rgba(23, 29, 27, 0.08);
+        }
+    </style>
+</head>
+<body class="bg-primary-container text-on-surface font-body-md selection:bg-tertiary-fixed selection:text-on-tertiary-fixed overflow-x-hidden">
+<!-- TopNavBar -->
+<header class="fixed top-0 w-full z-50 flex justify-between items-center px-margin-mobile md:px-margin-desktop py-4 bg-surface/90 backdrop-blur-md border-b border-outline-variant/20">
+<div class="font-headline-md text-headline-md font-bold text-on-surface">
+            LumiVision
+        </div>
+<nav class="hidden md:flex items-center gap-stack-md">
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-tertiary transition-colors duration-300" href="#process">Process</a>
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-tertiary transition-colors duration-300" href="#simulate">Simulate</a>
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-tertiary transition-colors duration-300" href="#features">Features</a>
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-tertiary transition-colors duration-300" href="#pricing">Pricing</a>
+</nav>
+<button class="bg-inverse-surface text-inverse-on-surface px-6 py-3 font-label-md text-label-md rounded-lg glow-amber transition-all duration-200 active:scale-95" onclick="console.log('Telemetry: analyze_my_room_click')">
+            Analyze My Room
+        </button>
+</header>
+<main class="mt-24">
+<!-- Hero Section -->
+<section class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop py-stack-lg flex flex-col md:flex-row items-center gap-stack-lg">
+<div class="flex-1 space-y-stack-sm">
+<h1 class="font-display-lg-mobile md:font-display-lg text-display-lg-mobile md:text-display-lg text-on-surface leading-tight">
+                    Master Your Lighting, <span class="text-tertiary">Elevate Your Space.</span>
+</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-xl">
+                    Transform any room with AI-precision lighting design tailored to your style and budget. Stop struggling to visualize effects or mismatching fixtures.
+                </p>
+<div class="pt-base flex flex-col sm:flex-row items-start sm:items-center gap-gutter">
+<button class="bg-inverse-surface text-inverse-on-surface px-8 py-4 font-label-md text-label-md rounded-lg glow-amber transition-all duration-200 shadow-xl" onclick="console.log('Telemetry: design_atmosphere_click')">
+                        Design Your Perfect Atmosphere
+                    </button>
+<div class="flex items-center gap-2">
+<span class="text-tertiary font-bold">★</span>
+<p class="text-label-sm font-label-sm text-outline">No credit card required. Avoid trial-and-error design mistakes.</p>
+</div>
+</div>
+</div>
+<div class="flex-1 w-full aspect-video md:aspect-square relative rounded-xl overflow-hidden group sweep-container">
+<img alt="Modern living room baseline lighting" class="absolute inset-0 w-full h-full object-cover grayscale opacity-50" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCMRsTEjFIISuCcrttp9D0fCnLpgZjgWUhu9y-KVeiBDgYLbgjDOz62HDCG9bSMHdbVnq2Xh9a23N2LCnBTW6O6Pq1wzUL6QYN6gpJd4D5TlsF0QzqRQI38B5gncnjxpwxMFykHbI7-fX_oMpfDrf10PXHxipzVZeKylNQ-nJ1D7yRxgZYQY_rhh7X2lKoNo2R9O7_rzWO3TbooxHDuB9HM6ADzj062gSU5mawjnuKy86s3QE0GjRKZKTeFhE6HThIl2pwyznMJPmXz"/>
+<div class="sweep-overlay absolute inset-0 w-0 h-full overflow-hidden border-r-2 border-tertiary-fixed">
+<img alt="Modern living room with warm AI-enhanced lighting" class="absolute inset-0 w-[100vw] md:w-[50vw] h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCMRsTEjFIISuCcrttp9D0fCnLpgZjgWUhu9y-KVeiBDgYLbgjDOz62HDCG9bSMHdbVnq2Xh9a23N2LCnBTW6O6Pq1wzUL6QYN6gpJd4D5TlsF0QzqRQI38B5gncnjxpwxMFykHbI7-fX_oMpfDrf10PXHxipzVZeKylNQ-nJ1D7yRxgZYQY_rhh7X2lKoNo2R9O7_rzWO3TbooxHDuB9HM6ADzj062gSU5mawjnuKy86s3QE0GjRKZKTeFhE6HThIl2pwyznMJPmXz"/>
+</div>
+<div class="absolute bottom-4 right-4 bg-surface/80 backdrop-blur-md px-4 py-2 rounded-lg border border-outline-variant/20">
+<p class="text-label-sm font-label-sm text-primary">Hover to reveal AI transformation</p>
+</div>
+</div>
+</section>
+<!-- Interactive Simulator -->
+<section class="bg-surface-container-low py-stack-lg" id="simulate">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
+<div class="text-center mb-stack-md">
+<span class="font-label-sm text-label-sm text-tertiary tracking-widest">LIVE SIMULATION</span>
+<h2 class="font-headline-lg text-headline-lg mt-base">Visualize Professional Light Temps</h2>
+</div>
+<div class="relative max-w-4xl mx-auto rounded-2xl overflow-hidden shadow-2xl border border-outline-variant/10">
+<div class="aspect-[16/9] w-full relative" id="simulator-canvas">
+<img alt="Simulator base" class="w-full h-full object-cover transition-all duration-700" id="sim-img" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCMRsTEjFIISuCcrttp9D0fCnLpgZjgWUhu9y-KVeiBDgYLbgjDOz62HDCG9bSMHdbVnq2Xh9a23N2LCnBTW6O6Pq1wzUL6QYN6gpJd4D5TlsF0QzqRQI38B5gncnjxpwxMFykHbI7-fX_oMpfDrf10PXHxipzVZeKylNQ-nJ1D7yRxgZYQY_rhh7X2lKoNo2R9O7_rzWO3TbooxHDuB9HM6ADzj062gSU5mawjnuKy86s3QE0GjRKZKTeFhE6HThIl2pwyznMJPmXz"/>
+<div class="absolute inset-0 transition-opacity duration-700" id="sim-overlay"></div>
+<!-- Tooltip -->
+<div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-inverse-surface text-inverse-on-surface p-6 rounded-xl shadow-2xl z-20 opacity-0 pointer-events-none transition-opacity duration-300" id="sim-tooltip">
+<p class="font-body-md mb-4">See this layout mapped with real products...</p>
+<button class="w-full bg-tertiary-fixed text-on-tertiary-fixed font-label-md py-3 rounded-lg hover:bg-tertiary-fixed-dim transition-colors" onclick="console.log('Telemetry: match_fixtures_click')">
+                                Match Fixtures Now
+                            </button>
+</div>
+</div>
+<div class="p-8 bg-surface border-t border-outline-variant/20 flex flex-col md:flex-row items-center gap-gutter">
+<div class="flex-1 w-full">
+<div class="flex justify-between mb-4">
+<span class="font-label-md text-primary">Cool White (6000K)</span>
+<span class="font-label-md text-tertiary">Architectural Amber (2200K)</span>
+</div>
+<input class="w-full h-2 bg-secondary-container rounded-lg appearance-none cursor-pointer accent-inverse-surface" id="light-slider" max="100" min="0" type="range" value="50"/>
+</div>
+<div class="flex gap-stack-sm">
+<span class="px-4 py-2 bg-surface-container-high rounded-full text-label-sm font-label-sm">Productivity</span>
+<span class="px-4 py-2 bg-surface-container-high rounded-full text-label-sm font-label-sm">Cozy Evening</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Features Grid -->
+<section class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop py-stack-lg" id="features">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
+<!-- Card 1 -->
+<div class="gallery-card p-8 bg-surface rounded-2xl flex flex-col">
+<div class="w-16 h-16 mb-stack-sm rounded-xl overflow-hidden bg-surface-container">
+<img alt="AI Visualization Icon" class="w-full h-full object-contain p-2" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD0rs5yVa1PwwhZaDVEHagUvqIXtfNW5JsF8h4I3Xlz8MRgw11X5qARZndzyYMyQsu4raXkevoQ8QycBvQNFcjKLRIV4hFtW3SDYQQfEbkTPpZrYOc7T5sCf0Qrox3JMZ38aF1na4HfKKJ0ljSGwZOAtwhA442gjfg8oz9rpnSnX6pfgHd5de3uojCRqd2ZpLjjECN_F4bCvfnKNzlj0WrH7PB2Fm44rk0caD31PscARxufIqgeeKdeS3_02MI1-DZ3csjgChLrMqZU"/>
+</div>
+<h3 class="font-headline-md text-headline-md mb-4">AI-Powered Photo-to-3D Visualization</h3>
+<p class="font-body-md text-on-surface-variant">Visualize lighting designs instantly. Upload photos of your interior or exterior spaces and see complex light distributions before purchasing fixtures.</p>
+</div>
+<!-- Card 2 -->
+<div class="gallery-card p-8 bg-surface rounded-2xl flex flex-col">
+<div class="w-16 h-16 mb-stack-sm rounded-xl overflow-hidden bg-surface-container">
+<img alt="Product Matching Icon" class="w-full h-full object-contain p-2" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAoV4o4HgqbnxcL6PGxfXO4ND0ULNaXTXzY7TxXoaD5zmtWOXUm31AIkSEkjlsoNVRzLE-uJ_tgmF1Sk4dNl1jHOAxgtREhbZ16y1xImtxp-8xUZdx5XQBSuY2ktYyMKP6MqwV2PPgYxwspgJR_ZroQ0IeKya1RQnVqGN8bfQbAPTi5NsaUrxov4K1Y8yqj2RcHVm-FopgqCj-PO1xlA1fIXEb-9jj02wZ_fcCNwo4a1W09dRYf7dTbYO2TcoEVfR0pspMNLQO89m9N"/>
+</div>
+<h3 class="font-headline-md text-headline-md mb-4">Curated Cross-Brand Product Matching</h3>
+<p class="font-body-md text-on-surface-variant">Say goodbye to style mismatches. Our engine scans top-tier global manufacturers to find compatible fixtures that match in tone, style, and finish.</p>
+</div>
+<!-- Card 3 -->
+<div class="gallery-card p-8 bg-surface rounded-2xl flex flex-col">
+<div class="w-16 h-16 mb-stack-sm rounded-xl overflow-hidden bg-surface-container">
+<img alt="Mood Recommendation Icon" class="w-full h-full object-contain p-2" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCxPwvCQefusBkkpH6YH3iuRtGExge2uq8PUufdxiUIccZyJP_70HORIswltRr6KQu8qfsr1g-Bstk5nKO7QcIXL7TbtVuYfCybtES9lF0rx3yHyAg3O-zV7qzjHJnb9FJQ7Foyh4VRulf-Pww97g-jq8R-g3QxV0oSdHMw1h1VLg_-mitOxtRC3B6EYgrpSTMRAsGTpdiY2aYELP6lPswM0JbtBhaH7CwrTH9dqo2mDl9iu7dhJ7Z5HzmJVzLweSDdAduKqh_Lwp1w"/>
+</div>
+<h3 class="font-headline-md text-headline-md mb-4">Mood-Based Recommendations</h3>
+<p class="font-body-md text-on-surface-variant">Tailor your space’s psychological output. Choose between high-end cozy evening moods, sharp productivity workspaces, or artistic architectural accents.</p>
+</div>
+</div>
+</section>
+<!-- Social Proof & Comparison -->
+<section class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop py-stack-lg">
+<h2 class="font-display-lg-mobile md:font-headline-lg text-center mb-stack-lg">Why Traditional Lighting Decisions Fail</h2>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-stack-lg items-center">
+<div class="space-y-stack-sm border-l-4 border-outline-variant/30 pl-stack-md">
+<span class="font-label-sm text-outline tracking-widest uppercase">The Old Way</span>
+<ul class="space-y-4">
+<li class="flex items-center gap-3">
+<span class="material-symbols-outlined text-outline">close</span>
+<span class="font-body-md text-outline">Too bright or too dark</span>
+</li>
+<li class="flex items-center gap-3">
+<span class="material-symbols-outlined text-outline">close</span>
+<span class="font-body-md text-outline">Fixtures clash in style</span>
+</li>
+<li class="flex items-center gap-3">
+<span class="material-symbols-outlined text-outline">close</span>
+<span class="font-body-md text-outline">Expensive return shipping fees</span>
+</li>
+</ul>
+</div>
+<div class="space-y-stack-sm border-l-4 border-tertiary pl-stack-md bg-tertiary-container/30 p-8 rounded-r-xl">
+<span class="font-label-sm text-tertiary tracking-widest uppercase">The LumiVision Way</span>
+<ul class="space-y-4">
+<li class="flex items-center gap-3">
+<span class="material-symbols-outlined text-tertiary">check_circle</span>
+<span class="font-body-md font-bold text-on-surface">Exact lumen simulations</span>
+</li>
+<li class="flex items-center gap-3">
+<span class="material-symbols-outlined text-tertiary">check_circle</span>
+<span class="font-body-md font-bold text-on-surface">Automated style matching</span>
+</li>
+<li class="flex items-center gap-3">
+<span class="material-symbols-outlined text-tertiary">check_circle</span>
+<span class="font-body-md font-bold text-on-surface">100% confidence before checkout</span>
+</li>
+</ul>
+</div>
+</div>
+<div class="mt-stack-lg max-w-2xl mx-auto text-center italic font-body-lg text-on-surface-variant">
+                "I was struggling to visualize how the pendant lights would look in my vaulted kitchen. LumiVision matched the exact fixtures and showed me the warm evening glow—saved me thousands in wrong choices."
+                <span class="block mt-4 not-italic font-bold text-on-surface">— Sarah K., Architectural Designer</span>
+</div>
+</section>
+<!-- Conversion Box -->
+<section class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop pb-stack-lg">
+<div class="bg-inverse-surface rounded-[2rem] p-8 md:p-16 text-center text-inverse-on-surface relative overflow-hidden">
+<div class="absolute top-0 right-0 w-64 h-64 bg-tertiary/10 blur-[100px] -z-10"></div>
+<div class="absolute bottom-0 left-0 w-64 h-64 bg-primary/10 blur-[100px] -z-10"></div>
+<h2 class="font-headline-lg text-headline-lg mb-stack-md">Get Your Custom Lighting Plan Today</h2>
+<form class="max-w-xl mx-auto flex flex-col gap-gutter" onsubmit="event.preventDefault(); console.log('Telemetry: form_submit')">
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-stack-sm">
+<select class="bg-surface/10 border border-outline/30 rounded-lg py-4 px-6 text-inverse-on-surface focus:border-tertiary-fixed outline-none appearance-none">
+<option disabled="" selected="" value="">Select your priority space</option>
+<option value="living">Living Room</option>
+<option value="kitchen">Kitchen &amp; Dining</option>
+<option value="exterior">Outdoor/Exterior</option>
+<option value="commercial">Commercial/Office</option>
+</select>
+<input class="bg-surface/10 border border-outline/30 rounded-lg py-4 px-6 text-inverse-on-surface focus:border-tertiary-fixed outline-none" placeholder="Email Address" required="" type="email"/>
+</div>
+<button class="bg-tertiary-fixed text-on-tertiary-fixed px-12 py-5 font-headline-md rounded-lg glow-amber hover:bg-tertiary-fixed-dim transition-all duration-300 font-bold active:scale-95">
+                        Generate My Custom Layout
+                    </button>
+<p class="text-label-sm text-outline-variant">Free for your first room. Delivered in &lt; 5 minutes.</p>
+</form>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full py-stack-md px-margin-mobile md:px-margin-desktop flex flex-col md:flex-row justify-between items-center gap-base border-t border-outline-variant/20 bg-surface-container-low">
+<div class="font-headline-sm text-headline-sm font-bold text-primary">
+            LumiVision
+        </div>
+<div class="font-label-sm text-label-sm text-on-surface-variant flex gap-gutter">
+<a class="hover:text-tertiary transition-colors" href="#">Privacy Policy</a>
+<a class="hover:text-tertiary transition-colors" href="#">Terms of Service</a>
+<a class="hover:text-tertiary transition-colors" href="#">Instagram</a>
+<a class="hover:text-tertiary transition-colors" href="#">LinkedIn</a>
+</div>
+<p class="font-label-sm text-label-sm text-on-surface-variant">
+            © 2024 LumiVision. Architectural Precision via AI.
+        </p>
+</footer>
+<script>
+        // Interactive Simulator Logic
+        const slider = document.getElementById('light-slider');
+        const img = document.getElementById('sim-img');
+        const overlay = document.getElementById('sim-overlay');
+        const tooltip = document.getElementById('sim-tooltip');
+        let hasInteracted = false;
+
+        slider.addEventListener('input', (e) => {
+            const val = e.target.value;
+            
+            // Effect: Brightness/Warmth mapping
+            // 0: Cool/Bright (SaaS look)
+            // 50: Neutral
+            // 100: Architectural Amber (Warm/Shadowy)
+            
+            const warmth = val / 100;
+            const coolIntensity = 1 - warmth;
+            
+            img.style.filter = `sepia(${warmth * 0.5}) brightness(${0.8 + (coolIntensity * 0.4)}) contrast(${1 + (warmth * 0.2)})`;
+            overlay.style.backgroundColor = `rgba(234, 168, 80, ${warmth * 0.15})`;
+            
+            if(!hasInteracted) {
+                tooltip.style.opacity = '1';
+                hasInteracted = true;
+                setTimeout(() => {
+                    tooltip.style.opacity = '0';
+                }, 4000);
+            }
+        });
+
+        // Initialize state
+        slider.dispatchEvent(new Event('input'));
+
+        // Intersection Observer for animations
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if(entry.isIntersecting) {
+                    entry.target.classList.add('opacity-100');
+                    entry.target.classList.remove('opacity-0', 'translate-y-10');
+                }
+            });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('.gallery-card').forEach(card => {
+            card.classList.add('opacity-0', 'translate-y-10', 'transition-all', 'duration-700');
+            observer.observe(card);
+        });
+    </script>
+</body></html>
